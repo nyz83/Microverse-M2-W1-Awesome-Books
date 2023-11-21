@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="index.js" defer></script>
+    <title>Awesome Books</title>
+  </head>
+
+  <body>
+    <main>
+      <section id="bookList"></section>
+      <section>
+        <h1>Add a new book</h1>
+        <form id="bookForm" action="">
+          <input type="text" id="bookTitle" placeholder="Title"/>
+          <input type="text" id="bookAuthor" placeholder="Author"
+          />
+          <button type="submit">Add</button>
+        </form>
+      </section>
+    </main>
+
+    <template id="bookItemTemplate">
+      <div id="bookWrapper">
+        <div>
+          <span id="bookTitle"></span>
+          <span>By</span>
+          <span id="bookAuthor"></span>
+        </div>
+        <button type="button" data-button-delete>
+          Remove
+        </button>
+      </div>
+    </template>
+  </body>
+</html>

@@ -21,8 +21,8 @@ bookForm.addEventListener('submit', (event) => {
   const newBook = new Book(bookTitle, bookAuthor);
   bookLibrary.addBook(newBook);
   bookLibrary.renderBook(newBook);
-  bookTitleInput = '';
-  bookAuthorInput = '';
+  bookTitleInput.value = '';
+  bookAuthorInput.value = '';
 });
 
 bookList.addEventListener('click', (event) => {

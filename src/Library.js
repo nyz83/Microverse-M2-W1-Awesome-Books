@@ -1,6 +1,6 @@
 /** @format */
 
-import { bookList, bookTemplate } from './variables.js';
+import { bookCollection, bookTemplate } from './variables.js';
 
 class Library {
   constructor() {
@@ -32,7 +32,7 @@ class Library {
     bookTitleEle.textContent = title;
     bookAuthorEle.textContent = author;
     if (this.books.indexOf(book) % 2 !== 0) bookItem.classList.add('bg-gray-300');
-    bookList.appendChild(templateClone);
+    bookCollection.appendChild(templateClone);
   }
 
   removeBook(bookId) {

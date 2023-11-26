@@ -1,5 +1,10 @@
 <a name="readme-top"></a>
 
+<div align="center">
+  <img src="microverse.png" alt="logo" width="140"  height="auto" />
+  <br/>
+</div>
+
 # 📗 Table of Contents
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)

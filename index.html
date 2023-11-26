@@ -3,32 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="index.js" defer></script>
+    <link rel="stylesheet" href="./dist/output.css" />
+    <script type="module" src="./src/index.js" defer></script>
     <title>Awesome Books</title>
   </head>
 
-  <body>
-    <main>
-      <section id="bookList"></section>
-      <section>
-        <h1>Add a new book</h1>
-        <form id="bookForm" action="">
-          <input type="text" id="bookTitle" placeholder="Title"/>
-          <input type="text" id="bookAuthor" placeholder="Author"
+  <body class="font-serif">
+    <main class="mt-8 flex flex-col justify-center">
+      <h1 class="font-bold text-center text-4xl capitalize">
+        All Awesome Books
+      </h1>
+      <section
+        id="booksList"
+        class="mx-4 mt-8 border-2 border-gray-900 md:mx-28"
+      ></section>
+      <section class="mt-8 flex flex-col gap-2 px-4 py-8 md:px-60">
+        <h2 class="mb-4 text-center text-3xl font-bold capitalize">
+          Add a new book
+        </h2>
+
+        <form id="bookForm" class="flex flex-col gap-2" action="" onsubmit="">
+          <input
+            type="text"
+            id="bookTitle"
+            placeholder="Title"
+            class="bg-gray-200 p-1"
           />
-          <button type="submit">Add</button>
+          <input
+            type="text"
+            id="bookAuthor"
+            placeholder="Author"
+            class="bg-gray-200 p-1"
+          />
+          <button
+            class="self-end border-2 border-gray-900 px-8 py-2 shadow-[4px_3px_0_0_rgba(17,24,39,1)]"
+            type="submit"
+          >
+            Add
+          </button>
         </form>
       </section>
     </main>
 
-    <template id="bookItemTemplate">
-      <div id="bookWrapper">
-        <div>
-          <span id="bookTitle"></span>
-          <span>By</span>
-          <span id="bookAuthor"></span>
+    <template id="bookTemplate">
+      <div
+        id="bookWrapper"
+        class="flex items-center justify-between p-2"
+      >
+        <div class="flex items-center justify-center gap-2">
+          <span id="bookTitle" class="text-base font-semibold"></span>
+          <span class="text-base font-semibold">By</span>
+          <span id="bookAuthor" class="text-base font-semibold"></span>
         </div>
-        <button type="button" data-button-delete>
+        <button
+          class="border-2 border-gray-800 px-4 py-1 shadow-[4px_3px_0_0_rgba(17,24,39,1)]"
+          type="button"
+          data-button-delete
+        >
           Remove
         </button>
       </div>
